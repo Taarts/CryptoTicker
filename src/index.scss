@@ -1,5 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap');
+
 :root {
   font: 16px / 1 sans-serif;
+  --ibm-blue: #305398;
+  --enlighten-me: #cbcbf8;
+  --contrast-banana: #f9efb2;
+  background: var(--ibm-blue);
 }
 
 html {
@@ -7,6 +13,121 @@ html {
 }
 
 body {
+  height: 100%;
   margin: 0;
-  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  color: var(--contrast-banana);
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--ibm-blue);
 }
+.app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  min-width: 80%;
+  margin-inline: 8rem;
+}
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  min-width: 100%;
+  padding: 0.5rem;
+  background-color: var(--enlighten-me);
+  color: var(--ibm-blue);
+  font: caption;
+  // font-size: 1.5rem;
+  padding-bottom: 1rem;
+  margin-inline: 10rem;
+}
+
+h1 {
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+main {
+  flex: 1;
+}
+
+.crypto {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  background-color: var(--enlighten-me);
+  color: var(--ibm-blue);
+  font: caption;
+  font-size: 1.5rem;
+  padding-bottom: 1rem;
+  margin-inline: 10rem;
+}
+
+ul {
+  text-align: left;
+  border: var(--enlighten-me) solid 1px;
+  padding: 0.2rem;
+  list-style: none;
+  cursor: pointer;
+
+  li {
+    display: flex;
+    // flex-direction: column;
+    justify-content: space-between;
+    margin: 0.7em;
+    border: var(--enlighten-me) solid 1px;
+    padding: 0.2rem;
+    color: var(--enlighten-me);
+
+    &:hover {
+      background-color: var(--contrast-banana);
+      color: var(--ibm-blue);
+    }
+  }
+}
+
+ul li {
+  align-items: flex-start;
+  display: flex;
+}
+
+ul li span {
+  color: var(--contrast-banana);
+  margin-left: 0.5em;
+}
+
+header,
+main,
+footer {
+  max-width: 30em;
+}
+
+footer {
+  margin-bottom: 0.5em;
+  font-size: 0.8em;
+  text-align: center;
+
+  img {
+    vertical-align: middle;
+    animation: spin infinite 10s linear;
+  }
+}
+
+// @keyframes spin {
+//   from {
+//     transform: rotate(0deg);
+//   }
+//   to {
+//     transform: rotate(360deg);
+//   }
+// }
